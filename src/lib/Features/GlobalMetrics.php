@@ -2,34 +2,27 @@
 
 namespace CoinMarketCap\Features;
 
+use CoinMarketCap\Traits\Quotes;
 use CoinMarketCap\Utils\ApiRequest;
 
 /**
- * GlobalMetrics
+ * GlobalMetrics.
  *
- * @link    https://github.com/vittominacori/coinmarketcap-php
+ * @see    https://github.com/vittominacori/coinmarketcap-php
+ *
  * @author  Vittorio Minacori (https://github.com/vittominacori)
  * @license https://github.com/vittominacori/coinmarketcap-php/blob/master/LICENSE (MIT License)
  */
 class GlobalMetrics extends ApiRequest
 {
-    /**
-     * GlobalMetrics constructor.
-     * @param string $apiKey
-     */
-    public function __construct($apiKey)
-    {
-        parent::__construct($apiKey);
-        self::$apiPath .= 'global-metrics' . '/';
-    }
+    use Quotes;
 
     /**
-     * @param array $params ["convert", "convert_id"]
-     * @return mixed
-     * @throws \Exception
+     * GlobalMetrics constructor.
      */
-    public function quotesLatest($params = [])
+    public function __construct(string $apiKey, bool $sandbox = false)
     {
-        return $this->get('quotes/latest', $params);
+        parent::__construct($apiKey, $sandbox);
+        $this->apiPath .= 'global-metrics'.'/';
     }
 }
