@@ -43,56 +43,56 @@ class Api
 
     public static function blockchain(): Blockchain
     {
-        self::$blockchain = self::$blockchain ?: new Blockchain(self::$apiKey, self::$sandbox);
+        self::$blockchain = self::$blockchain ?? new Blockchain(self::$apiKey, self::$sandbox);
 
         return self::$blockchain;
     }
 
     public static function cryptocurrency(): Cryptocurrency
     {
-        self::$cryptocurrency = self::$cryptocurrency ?: new Cryptocurrency(self::$apiKey, self::$sandbox);
+        self::$cryptocurrency = self::$cryptocurrency ?? new Cryptocurrency(self::$apiKey, self::$sandbox);
 
         return self::$cryptocurrency;
     }
 
     public static function exchange(): Exchange
     {
-        self::$exchange = self::$exchange ?: new Exchange(self::$apiKey, self::$sandbox);
+        self::$exchange = self::$exchange ?? new Exchange(self::$apiKey, self::$sandbox);
 
         return self::$exchange;
     }
 
     public static function fiat(): Fiat
     {
-        self::$fiat = self::$fiat ?: new Fiat(self::$apiKey, self::$sandbox);
+        self::$fiat = self::$fiat ?? new Fiat(self::$apiKey, self::$sandbox);
 
         return self::$fiat;
     }
 
     public static function globalMetrics(): GlobalMetrics
     {
-        self::$globalMetrics = self::$globalMetrics ?: new GlobalMetrics(self::$apiKey, self::$sandbox);
+        self::$globalMetrics = self::$globalMetrics ?? new GlobalMetrics(self::$apiKey, self::$sandbox);
 
         return self::$globalMetrics;
     }
 
     public static function key(): Key
     {
-        self::$key = self::$key ?: new Key(self::$apiKey, self::$sandbox);
+        self::$key = self::$key ?? new Key(self::$apiKey, self::$sandbox);
 
         return self::$key;
     }
 
     public static function partners(): Partners
     {
-        self::$partners = self::$partners ?: new Partners(self::$apiKey, self::$sandbox);
+        self::$partners = self::$partners ?? new Partners(self::$apiKey, self::$sandbox);
 
         return self::$partners;
     }
 
     public static function tools(): Tools
     {
-        self::$tools = self::$tools ?: new Tools(self::$apiKey, self::$sandbox);
+        self::$tools = self::$tools ?? new Tools(self::$apiKey, self::$sandbox);
 
         return self::$tools;
     }
