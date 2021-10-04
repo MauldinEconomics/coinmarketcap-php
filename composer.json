@@ -18,12 +18,15 @@
   "require": {
     "ext-curl": "*",
     "ext-json": "*",
-    "php": ">=7.0.0",
+    "php": ">=7.4.0",
     "mashape/unirest-php": "^3.0"
   },
   "autoload": {
     "psr-4": {
       "CoinMarketCap\\": "src/lib/"
     }
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.1"
   }
 }
