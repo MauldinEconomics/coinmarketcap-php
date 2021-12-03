@@ -21,16 +21,55 @@ use CoinMarketCap\Features\Tools;
  */
 class Api
 {
-    private static string $apiKey;
-    private static bool $sandbox;
-    private static ?Blockchain $blockchain;
-    private static ?Cryptocurrency $cryptocurrency;
-    private static ?Exchange $exchange;
-    private static ?Fiat $fiat;
-    private static ?GlobalMetrics $globalMetrics;
-    private static ?Key $key;
-    private static ?Partners $partners;
-    private static ?Tools $tools;
+    /**
+     * @var string
+     */
+    private static $apiKey = '';
+
+    /**
+     * @var bool
+     */
+    private static $sandbox = false;
+
+    /**
+     * @var Blockchain
+     */
+    private static $blockchain = null;
+
+    /**
+     * @var Cryptocurrency
+     */
+    private static $cryptocurrency = null;
+
+    /**
+     * @var Exchange
+     */
+    private static $exchange = null;
+
+    /**
+     * @var Fiat
+     */
+    private static $fiat = null;
+
+    /**
+     * @var GlobalMetrics
+     */
+    private static $globalMetrics = null;
+
+    /**
+     * @var Key
+     */
+    private static $key = null;
+
+    /**
+     * @var Partners
+     */
+    private static $partners = null;
+
+    /**
+     * @var Tools
+     */
+    private static $tools = null;
 
     /**
      * Api constructor.

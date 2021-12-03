@@ -7,6 +7,7 @@ $finder = (new PhpCsFixer\Finder())
 return (new PhpCsFixer\Config())
     ->setRules([
         '@Symfony' => true,
+        '@PHP73Migration' => true,
         'binary_operator_spaces' => [
             'default' => 'align_single_space_minimal',
             'operators' => [
